@@ -1,6 +1,6 @@
 [package]
-name = "tree-sitter-javascript"
-description = "JavaScript grammar for tree-sitter"
+name = "tree-sitter-squirrel"
+description = "Squirrel grammar for tree-sitter"
 version = "0.21.4"
 authors = [
   "Max Brunsfeld <maxbrunsfeld@gmail.com>",
@@ -8,7 +8,7 @@ authors = [
   "Amaan Qureshi <amaanq12@gmail.com>",
 ]
 license = "MIT"
-keywords = ["incremental", "parsing", "tree-sitter", "javascript"]
+keywords = ["incremental", "parsing", "tree-sitter", "squirrel"]
 categories = ["parsing", "text-editors"]
 repository = "https://github.com/tree-sitter/tree-sitter-javascript"
 edition = "2021"

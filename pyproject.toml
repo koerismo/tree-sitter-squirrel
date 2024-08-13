@@ -3,10 +3,10 @@ requires = ["setuptools>=42", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "tree-sitter-javascript"
-description = "Javascript grammar for tree-sitter"
+name = "tree-sitter-squirrel"
+description = "Squirrel grammar for tree-sitter"
 version = "0.21.4"
-keywords = ["incremental", "parsing", "tree-sitter", "javascript"]
+keywords = ["incremental", "parsing", "tree-sitter", "squirrel"]
 classifiers = [
   "Intended Audience :: Developers",
   "License :: OSI Approved :: MIT License",
