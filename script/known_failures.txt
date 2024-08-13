@@ -1,1 +1,0 @@
-examples/reference/hardware/HT16K33/ht16k33big.class.nut

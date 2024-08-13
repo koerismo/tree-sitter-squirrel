@@ -37,25 +37,25 @@ const PREC = {
 };
 
 /**
- * Creates a rule to match zero or more of the rules optionally separated by a comma
- *
- * @param {Rule} rule
- *
- * @return {SeqRule}
- *
- */
+   * Creates a rule to match zero or more of the rules optionally separated by a comma
+   *
+   * @param {Rule} rule
+   *
+   * @return {SeqRule}
+   *
+   */
 function optionalCommaSep(rule) {
   return sep1(rule, optional(','));
 }
 
 /**
- * Creates a rule to match one or more of the rules separated by a comma
- *
- * @param {Rule} rule
- *
- * @return {SeqRule}
- *
- */
+   * Creates a rule to match one or more of the rules separated by a comma
+   *
+   * @param {Rule} rule
+   *
+   * @return {SeqRule}
+   *
+   */
 function commaSep1(rule) {
   return sep1(rule, ',');
 }
@@ -70,14 +70,14 @@ function commaSep(rule) {
 }
 
 /**
-* Creates a rule to match one or more of the rules separated by the separator
-*
-* @param {Rule} rule
-* @param {string|Rule} separator - The separator to use.
-*
-* @return {SeqRule}
-*
-*/
+  * Creates a rule to match one or more of the rules separated by the separator
+  *
+  * @param {Rule} rule
+  * @param {string|Rule} separator - The separator to use.
+  *
+  * @return {SeqRule}
+  *
+  */
 function sep1(rule, separator) {
   return seq(rule, repeat(seq(separator, rule)));
 }

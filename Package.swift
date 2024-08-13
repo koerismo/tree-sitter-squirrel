@@ -2,28 +2,36 @@
 import PackageDescription
 
 let package = Package(
-    name: "TreeSitterSquirrel",
-    platforms: [.macOS(.v10_13), .iOS(.v11)],
+    name: "TreeSitterJavascript",
     products: [
-        .library(name: "TreeSitterSquirrel", targets: ["TreeSitterSquirrel"]),
+        .library(name: "TreeSitterJavascript", targets: ["TreeSitterJavascript"]),
     ],
     dependencies: [],
     targets: [
-        .target(name: "TreeSitterSquirrel",
+        .target(name: "TreeSitterJavascript",
                 path: ".",
                 exclude: [
-                    "binding.gyp",
-                    "bindings",
                     "Cargo.toml",
+                    "Makefile",
+                    "binding.gyp",
+                    "bindings/c",
+                    "bindings/go",
+                    "bindings/node",
+                    "bindings/python",
+                    "bindings/rust",
+                    "prebuilds",
+                    "grammar.js",
+                    "package.json",
+                    "package-lock.json",
+                    "pyproject.toml",
+                    "setup.py",
                     "test",
                     "examples",
-                    "grammar.js",
-                    "LICENSE",
-                    "package.json",
-                    "README.md",
-                    "script",
-                    "src/grammar.json",
-                    "src/node-types.json",
+                    ".editorconfig",
+                    ".github",
+                    ".gitignore",
+                    ".gitattributes",
+                    ".gitmodules",
                 ],
                 sources: [
                     "src/parser.c",
@@ -34,5 +42,6 @@ let package = Package(
                 ],
                 publicHeadersPath: "bindings/swift",
                 cSettings: [.headerSearchPath("src")])
-    ]
+    ],
+    cLanguageStandard: .c11
 )
