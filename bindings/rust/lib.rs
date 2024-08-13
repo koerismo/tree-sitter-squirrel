@@ -25,14 +25,14 @@
 use tree_sitter::Language;
 
 extern "C" {
-    fn tree_sitter_javascript() -> Language;
+    fn tree_sitter_squirrel() -> Language;
 }
 
 /// Returns the tree-sitter [Language][] for this grammar.
 ///
 /// [Language]: https://docs.rs/tree-sitter/*/tree_sitter/struct.Language.html
 pub fn language() -> Language {
-    unsafe { tree_sitter_javascript() }
+    unsafe { tree_sitter_squirrel() }
 }
 
 /// The content of the [`node-types.json`][] file for this grammar.
@@ -47,13 +47,13 @@ pub const HIGHLIGHT_QUERY: &str = include_str!("../../queries/highlights.scm");
 pub const INJECTIONS_QUERY: &str = include_str!("../../queries/injections.scm");
 
 /// The syntax highlighting query for JSX.
-pub const JSX_HIGHLIGHT_QUERY: &str = include_str!("../../queries/highlights-jsx.scm");
+// pub const JSX_HIGHLIGHT_QUERY: &str = include_str!("../../queries/highlights-jsx.scm");
 
 /// The local-variable syntax highlighting query for this language.
 pub const LOCALS_QUERY: &str = include_str!("../../queries/locals.scm");
 
 /// The symbol tagging query for this language.
-pub const TAGS_QUERY: &str = include_str!("../../queries/tags.scm");
+// pub const TAGS_QUERY: &str = include_str!("../../queries/tags.scm");
 
 #[cfg(test)]
 mod tests {

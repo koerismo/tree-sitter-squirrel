@@ -1,4 +1,4 @@
-"Javascript grammar for tree-sitter"
+"Squirrel grammar for tree-sitter"
 
 from ._binding import language
 
